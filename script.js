@@ -24,7 +24,7 @@ let health = 4;
 let interval;
 let timer;
 
-let levelLabel = 1;        
+let levelLabel = 1;
 let level = 4500;
 let targetSpeed = 100;
 
@@ -39,13 +39,13 @@ hitAudio.autoplay = "autoplay";
 bgAudio.autoplay = "autoplay";
 
 const appendLives = () => {
-lives.innerHTML = "";
-for(let i = 0; i < 4; i++) {
-    const life = document.createElement("img");
-    life.src = "images/heart.png";
-    life.classList = "heart";
-    document.querySelector(".container-lives").append(life);
-}
+    lives.innerHTML = "";
+    for(let i = 0; i < 4; i++) {
+        const life = document.createElement("img");
+        life.src = "images/heart.png";
+        life.classList = "heart";
+        document.querySelector(".container-lives").append(life);
+    }
 }
 
 const moveCursor = (e) => {
