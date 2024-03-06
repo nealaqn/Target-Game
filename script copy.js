@@ -19,12 +19,10 @@ const lives = document.querySelector(".container-lives");
 let randWidth = 0;
 let randHeight = 0;
 let score = 0;
+let currentTargetSize = 0;
 let health = 4;
 let interval;
 let timer;
-
-let currentTargetSize = 0;
-let constTargetSpeed = 0.05;
 
 let levelLabel = 1;
 let level = 4500;
@@ -100,7 +98,7 @@ const moveUp = () => {
         return;
     };
     target.style.transform = "scale("+ currentTargetSize +")";
-    currentTargetSize += constTargetSpeed;
+    currentTargetSize += 0.05;
 }
 
 const moveDown = () => {
@@ -126,7 +124,7 @@ const moveDown = () => {
             clearInterval(interval);
             clearInterval(timer);
         }
-        currentTargetSize -= constTargetSpeed;
+        currentTargetSize -= 0.05;
         target.style.transform = "scale("+ currentTargetSize +")";
     }, targetSpeed)
 }
