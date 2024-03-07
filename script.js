@@ -23,12 +23,13 @@ let health = 4;
 let interval;
 let timer;
 
-let currentTargetSize = 0;
-let constTargetSpeed = 0.05;
+
+let currentTargetSize = 0;// for target file
+let constTargetSpeed = 0.05;// for target file
 
 let levelLabel = 1;
 let level = 4500;
-let targetSpeed = 100;
+let targetSpeed = 100;// for target file
 
 getReady.classList = "get-ready";
 getReady.innerHTML = "Get Ready!"
