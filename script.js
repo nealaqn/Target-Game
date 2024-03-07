@@ -1,8 +1,8 @@
 const container = document.querySelector(".container");
 const cursor = document.querySelector(".cursor");
 
-const target = document.createElement("img");
-const hitAudio = document.createElement("audio");
+const target = document.createElement("img");// for target file
+const hitAudio = document.createElement("audio");// for target file
 const bgAudio = document.createElement("audio");
 const getReady = document.createElement("div");
 
@@ -16,13 +16,12 @@ const button = document.querySelector(".button");
 const title = document.querySelector(".title");
 const lives = document.querySelector(".container-lives");
 
-let randWidth = 0;
-let randHeight = 0;
+let randWidth = 0; // for target file
+let randHeight = 0; // for target file
 let score = 0;
 let health = 4;
 let interval;
 let timer;
-
 
 let currentTargetSize = 0;// for target file
 let constTargetSpeed = 0.05;// for target file
@@ -56,7 +55,7 @@ const moveCursor = (e) => {
     cursor.style.transform = 'translate(' + cursorX + 'px,' + cursorY + 'px)';
 }
 
-const targetHit = () => {
+const targetHit = () => {// for target file
     score++
     target.remove();
     hitAudio.src = "audio/hit.mp3"
@@ -94,7 +93,7 @@ const gameLevel = () => {
     }
 }
 
-const moveUp = () => {
+const moveUp = () => {// for target file
     if (currentTargetSize > 1.05) {
         clearInterval(interval);
         moveDown();
@@ -104,7 +103,7 @@ const moveUp = () => {
     currentTargetSize += constTargetSpeed;
 }
 
-const moveDown = () => {
+const moveDown = () => {// for target file
     interval = setInterval(() => {
         if (currentTargetSize <= 0) {
             spawnTarget();
@@ -132,7 +131,7 @@ const moveDown = () => {
     }, targetSpeed)
 }
 
-const spawnTarget = () => {
+const spawnTarget = () => { // for target file
     currentTargetSize = 0;
     clearInterval(interval);
     document.querySelector(".container").append(target);
